@@ -3,7 +3,7 @@ build
 package-lock.json
 .idea
 
-config.js
+server/config.js
 
 # misc
 .DS_Store

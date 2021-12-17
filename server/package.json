@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^6.1.2",
     "sass": "^1.45.0"

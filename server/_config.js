@@ -1,2 +1,2 @@
-const connectionString = "mongodb+srv://username:password@todo-app.v757g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const connectionString = "mongodb+srv://username:password@server/database";
 module.exports = connectionString;

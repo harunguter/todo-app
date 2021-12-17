@@ -10,7 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "express": "^4.17.1",
-    "mongoose": "^6.1.2"
+    "mongoose": "^6.1.2",
+    "sass": "^1.45.0"
   }
 }

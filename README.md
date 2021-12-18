@@ -31,10 +31,6 @@ start.bat
 GET /api/todos
 ```
 
-| Parameter |
-| :-------- |
-| `null` |
-
 #### Get single todo
 
 ```apib

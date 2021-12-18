@@ -28,7 +28,7 @@ start.bat
 #### Get all todos
 
 ```apib
-GET /todos
+GET /api/todos
 ```
 
 | Parameter |
@@ -38,7 +38,7 @@ GET /todos
 #### Get single todo
 
 ```apib
-GET /todos/{id}
+GET /api/todos/{id}
 
 ```
 
@@ -49,7 +49,7 @@ GET /todos/{id}
 #### Add a new todo
 
 ```apib
-POST /todos
+POST /api/todos
 ```
 
 ```apib
@@ -59,7 +59,7 @@ POST /todos
 #### Update todo
 
 ```apib
-PUT /todos/{id}
+PUT /api/todos/{id}
 ```
 
 | Parameter | Type     |
@@ -73,7 +73,7 @@ PUT /todos/{id}
 #### Delete todo
 
 ```apib
-DELETE /todos/{id}
+DELETE /api/todos/{id}
 ```
 
 | Parameter | Type     |

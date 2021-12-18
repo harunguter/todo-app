@@ -6,6 +6,7 @@ import axios from "axios";
 const TodoForm = () => {
 
     const {todo, setTodo} = useContext(MainContext);
+    const {todos, setTodos} = useContext(MainContext);
     const {update, setUpdate} = useContext(MainContext);
 
     const addTodo = async (data) => {
@@ -17,11 +18,11 @@ const TodoForm = () => {
                     setTodo(null);
                 })
                 .catch(error => console.log(error))
-        else
-            return false;
+        else return false;
     }
 
     const updateTodo = async (data) => {
+        setTodo(null);
         if (data !== null) {
             const content = document.getElementById("todo-form").value;
             await axios.put(config.apiUrl + data._id,
@@ -33,19 +34,16 @@ const TodoForm = () => {
                     console.log(response.data);
                     document.getElementById("todo-form").value = null;
                     setUpdate(null);
-                    setTodo(null);
                 })
                 .catch(error => console.log(error))
         }
     }
 
-
     return (
         <div className="todo-form mt-3">
             <input className="form-control" id="todo-form" type="text" placeholder="Add your new todo"
                    onChange={e => setTodo(e.target.value)}
-                   onKeyDown={k => k.keyCode === 13 ? update !== null ? updateTodo(update) : addTodo(todo) : null}
-            />
+                   onKeyDown={k => k.keyCode === 13 ? update !== null ? updateTodo(update) : addTodo(todo) : null}/>
             {
                 update === null ?
                     <button className="btn btn-info" onClick={() => addTodo(todo)}>

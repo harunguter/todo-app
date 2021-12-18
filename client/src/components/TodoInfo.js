@@ -27,8 +27,9 @@ const TodoInfo = () => {
                     {
                         todos.filter(t => !t.completed).length === 0 ?
                             <p className="d-none d-sm-block">All tasks completed</p> :
-                            <p className="d-none d-sm-block">You
-                                have {todos.filter(t => !t.completed).length} pending tasks</p>
+                            <p className="d-none d-sm-block">
+                                You have {todos.filter(t => !t.completed).length} pending tasks
+                            </p>
                     }
                     <button className="btn btn-danger" onClick={() => deleteAllTodos()}>Clear All</button>
                 </> : null

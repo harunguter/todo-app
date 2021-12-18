@@ -53,7 +53,7 @@ POST /api/todos
 ```
 
 ```apib
-{"content": String}
+Body: {"content": String}
 ```
 
 #### Update todo
@@ -67,7 +67,7 @@ PUT /api/todos/{id}
 | `id`      | `string` | 
 
 ```apib
-{"content": String}
+Body: {"content": String}
 ```
 
 #### Delete todo

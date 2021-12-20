@@ -27,15 +27,14 @@ start.bat
 
 #### Get all todos
 
-```apib
+```http
 GET /api/todos
 ```
 
 #### Get single todo
 
-```apib
+```http
 GET /api/todos/{id}
-
 ```
 
 | Parameter | Type     |
@@ -44,7 +43,7 @@ GET /api/todos/{id}
 
 #### Add a new todo
 
-```apib
+```http
 POST /api/todos
 ```
 
@@ -54,7 +53,7 @@ Body: {"content": String}
 
 #### Update todo
 
-```apib
+```http
 PUT /api/todos/{id}
 ```
 
@@ -68,7 +67,7 @@ Body: {"content": String}
 
 #### Delete todo
 
-```apib
+```http
 DELETE /api/todos/{id}
 ```
 

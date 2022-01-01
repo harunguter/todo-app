@@ -9,7 +9,8 @@ git clone https://github.com/harun-guter/todo-app.git
 cd todo-app
 install.bat
 ```
-
+Rename the file *server\_config.js* to *server\config.js*.
+<br>
 Change *connectionString* value from **server\config.js** file.
 
 ## Run Locally

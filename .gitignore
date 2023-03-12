@@ -3,8 +3,6 @@ build
 package-lock.json
 .idea
 
-server/config.js
-
 # misc
 .DS_Store
 .env.local
@@ -15,3 +13,4 @@ server/config.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.npmrc

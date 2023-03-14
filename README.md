@@ -3,7 +3,7 @@
 ![Screenshot](https://raw.githubusercontent.com/harunguter/todo-app/main/screenshot.png)
 
 ## Run app
-```bash
+```
     git clone https://github.com/harun-guter/todo-app.git
     cd todo-app
     docker-compose up
@@ -19,12 +19,12 @@
 ## API Reference
 
 #### Get all todos
-```http
+```
   GET /api/todo
 ```
 
 #### Get single todo
-```http
+```
   GET /api/todo/:id
 ```
 | Parameter | Type     | 
@@ -32,7 +32,7 @@
 | `id`      | `string` |
 
 #### Add todo
-```http
+```
   POST /api/todo/
 
   {
@@ -41,7 +41,7 @@
 ```
 
 #### Update todo
-```http
+```
   POST /api/todo/:id
 
   {
@@ -53,7 +53,7 @@
 | `id`      | `string` |
 
 #### Delete todo
-```http
+```
   DELETE /api/todo/:id
 ```
 | Parameter | Type     | 

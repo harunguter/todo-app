@@ -1,0 +1,113 @@
+*::-webkit-scrollbar {
+    width: 5px !important;
+    height: 5px !important;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background: #aaa !important;
+    border-radius: 2.5px !important;
+}
+
+*::-webkit-scrollbar-track {
+    background: #ccc !important;
+    border-radius: 2.5px !important;
+}
+
+body {
+    background: rgb(238,223,174);
+    background: radial-gradient(circle, rgba(238,223,174,1) 0%, rgba(148,233,213,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.app-container {
+    display: flex!important;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0!important
+}
+
+.list-container {
+    width: 400px;
+    padding: 20px 30px!important
+}
+
+.app-item-list {
+    max-height: 300px;
+    min-height: 300px;
+    overflow-y: auto;
+}
+
+.app-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.app-item:hover {
+    background: #eee;
+}
+
+.app-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.app-radio-checked {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid #27ae60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-radio-checked span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #27ae60;
+}
+
+.app-item-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+}
+
+.app-item-controls {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.app-item-controls span{
+    cursor: pointer;
+    display: inline-block;
+}
+
+.app-item-controls span:hover {
+    opacity: .5
+}
+
+.app-empty {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+}
+.app-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

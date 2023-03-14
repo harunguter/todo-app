@@ -1,0 +1,37 @@
+version: "3.8"
+services:
+  frontend:
+    image: frontend
+    build:
+        context: frontend
+        dockerfile: ./Dockerfile
+    container_name: frontend
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+
+  backend:
+    image: backend
+    build:
+        context: backend
+        dockerfile: ./Dockerfile
+    container_name: backend
+    restart: unless-stopped
+    ports:
+      - 8080:8080
+
+  mongodb:
+    image: mongo:latest
+    container_name: database
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: pZ5FbOZ50GkZ
+    ports:
+      - 27017:27017
+    volumes:
+      - mongodb:/data/db
+
+volumes:
+  mongodb:
+    driver: local

@@ -1,0 +1,11 @@
+{
+  "retainLines": false,
+  "env": {
+    "development": {
+      "presets": ["react-app"],
+      "plugins": [],
+      "comments": false
+    },
+    "production": {}
+  }
+}

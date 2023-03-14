@@ -3,6 +3,12 @@ build
 package-lock.json
 .idea
 
+# testing
+/coverage
+
+# production
+/build
+
 # misc
 .DS_Store
 .env.local

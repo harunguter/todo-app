@@ -42,7 +42,7 @@
 
 #### Update todo
 ```
-  POST /api/todo/:id
+  PUT /api/todo/:id
 
   {
     "content": "string"

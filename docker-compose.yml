@@ -1,24 +1,33 @@
 version: "3.8"
 services:
-  frontend:
-    image: frontend
+
+  nginx:
     build:
-        context: frontend
+      context: ./nginx
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+    - 80:80
+  
+  client:
+    image: client
+    build:
+        context: client
         dockerfile: ./Dockerfile
-    container_name: frontend
+    container_name: client
     restart: unless-stopped
     ports:
       - 3000:3000
 
-  backend:
-    image: backend
+  server:
+    image: server
     build:
-        context: backend
+        context: server
         dockerfile: ./Dockerfile
-    container_name: backend
+    container_name: server
     restart: unless-stopped
     ports:
-      - 8080:8080
+      - 3001:3001
 
   mongodb:
     image: mongo:latest

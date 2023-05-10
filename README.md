@@ -20,12 +20,12 @@
 
 #### Get all todos
 ```http
-  GET /todo
+  GET /todo/
 ```
 
 #### Get single todo
 ```http
-  GET /todo/:id
+  GET   /todo/:id/
 ```
 | Parameter | Type     | 
 | --------- | -------- |
@@ -33,7 +33,7 @@
 
 #### Add todo
 ```http
-  POST /todo
+  POST  /todo/
 ```
 ```
   {
@@ -43,7 +43,7 @@
 
 #### Update todo
 ```http
-  PUT /todo/:id
+  PUT /todo/:id/
 ```
 ```
   {
@@ -56,7 +56,7 @@
 
 #### Delete todo
 ```http
-  DELETE /todo/:id
+  DELETE  /todo/:id/
 ```
 | Parameter | Type     | 
 | --------- | -------- |

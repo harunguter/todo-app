@@ -33,8 +33,9 @@
 
 #### Add todo
 ```http
-  POST /todo/
-
+  POST /todo
+```
+```
   {
     "content": "string"
   }
@@ -43,7 +44,8 @@
 #### Update todo
 ```http
   PUT /todo/:id
-
+```
+```
   {
     "content": "string"
   }

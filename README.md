@@ -9,7 +9,6 @@
     docker-compose up
 ```
 
-
 | Frontend | API |
 | :-------- | :------- |
 | `http://localhost`      | `http://localhost/api` | 
@@ -19,21 +18,21 @@
 ## API Reference
 
 #### Get all todos
-```http
+```
     GET /api/todo
 ```
 
 #### Get single todo
-```http
-  GET   /todo/:id/
+```
+  GET /todo/:id
 ```
 | Parameter | Type     | 
 | --------- | -------- |
 | `id`      | `string` |
 
 #### Add todo
-```http
-  POST  /todo/
+```
+  POST /todo
 ```
 ```
   {
@@ -42,8 +41,8 @@
 ```
 
 #### Update todo
-```http
-  PUT /todo/:id/
+```
+  PUT /todo/:id
 ```
 ```
   {
@@ -55,8 +54,8 @@
 | `id`      | `string` |
 
 #### Delete todo
-```http
-  DELETE  /todo/:id/
+```
+  DELETE  /todo/:id
 ```
 | Parameter | Type     | 
 | --------- | -------- |

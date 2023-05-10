@@ -12,7 +12,7 @@
 
 | Frontend | API |
 | :-------- | :------- |
-| `http://localhost:3000`      | `http://localhost:8080` | 
+| `http://localhost`      | `http://localhost/api` | 
 
 ---
 
@@ -20,12 +20,12 @@
 
 #### Get all todos
 ```
-  GET /api/todo
+  GET /todo
 ```
 
 #### Get single todo
 ```
-  GET /api/todo/:id
+  GET /todo/:id
 ```
 | Parameter | Type     | 
 | --------- | -------- |
@@ -33,7 +33,7 @@
 
 #### Add todo
 ```
-  POST /api/todo/
+  POST /todo/
 
   {
     "content": "string"
@@ -42,7 +42,7 @@
 
 #### Update todo
 ```
-  PUT /api/todo/:id
+  PUT /todo/:id
 
   {
     "content": "string"
@@ -54,7 +54,7 @@
 
 #### Delete todo
 ```
-  DELETE /api/todo/:id
+  DELETE /todo/:id
 ```
 | Parameter | Type     | 
 | --------- | -------- |
@@ -63,6 +63,8 @@
 ---
 ## Tech Stack
 
+**Server:** Nginx
+<br>
 **Frontend:** React, Semantic UI
 <br>
 **API:** Node, Express, MongoDB

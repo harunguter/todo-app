@@ -2,8 +2,10 @@ version: "3.8"
 services:
 
   nginx:
+    image: nginx
     build:
       context: ./nginx
+      dockerfile: ./Dockerfile
     container_name: nginx
     restart: unless-stopped
     ports:

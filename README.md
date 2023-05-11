@@ -34,7 +34,7 @@ GET /todo/:id
 ```http
 POST /todo
 ```
-```javasctipt
+```javascript
 {
     "content": "string"
 }

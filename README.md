@@ -18,45 +18,44 @@
 ## API Reference
 
 #### Get all todos
-
 ```http
 GET /api/todo
 ```
 
 #### Get single todo
-```
-  GET /todo/:id
+```http
+GET /todo/:id
 ```
 | Parameter | Type     | 
 | --------- | -------- |
 | `id`      | `string` |
 
 #### Add todo
+```http
+POST /todo
 ```
-  POST /todo
-```
-```
-  {
+```javasctipt
+{
     "content": "string"
-  }
+}
 ```
 
 #### Update todo
+```http
+PUT /todo/:id
 ```
-  PUT /todo/:id
-```
-```
-  {
+```javascript
+{
     "content": "string"
-  }
+}
 ```
 | Parameter | Type     | 
 | --------- | -------- |
 | `id`      | `string` |
 
 #### Delete todo
-```
-  DELETE  /todo/:id
+```http
+DELETE  /todo/:id
 ```
 | Parameter | Type     | 
 | --------- | -------- |

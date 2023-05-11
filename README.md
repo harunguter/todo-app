@@ -18,7 +18,8 @@
 ## API Reference
 
 #### Get all todos
-```
+
+```http
     GET /api/todo
 ```
 

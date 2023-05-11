@@ -20,7 +20,7 @@
 #### Get all todos
 
 ```http
-    GET /api/todo
+GET /api/todo
 ```
 
 #### Get single todo

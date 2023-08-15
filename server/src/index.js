@@ -19,6 +19,6 @@ app.use(cors({ origin: "*" }));
 
 app.use(loggerMiddleware.logger());
 
-app.use("/todo", todoRoute);
+app.use("/api/todo", todoRoute);
 
 app.listen(port, () => logger.info(`API started, Port: ${port}`));

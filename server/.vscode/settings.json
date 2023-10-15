@@ -1,7 +1,0 @@
-{
-  "eslint.nodeEnv": "development",
-  "eslint.codeActionsOnSave.mode": "all",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
-}

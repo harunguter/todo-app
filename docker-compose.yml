@@ -21,10 +21,10 @@ services:
     ports:
       - 3000:3000
 
-  server:
-    image: server
+  api:
+    image: api
     build:
-        context: server
+        context: api
         dockerfile: ./Dockerfile
     container_name: server
     restart: unless-stopped

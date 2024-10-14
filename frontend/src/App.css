@@ -1,0 +1,26 @@
+.light {
+  background: #f3f7fd;
+}
+
+.dark {
+  background: #000;
+}
+
+.todo-item {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.todo-item-dark:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.todo-item-light:hover {
+  background: rgba(0, 0, 0, 0.05);
+}

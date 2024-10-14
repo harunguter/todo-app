@@ -44,7 +44,7 @@ app.MapGet(route, async (TodoDbContext context) =>
 /// <summary>
 /// Get single todo by id
 /// </summary>
-app.MapGet($"{route}/{{id}}", async (Guid id, TodoDbContext context) =>
+app.MapGet($"{route}/{{id}}", async (string id, TodoDbContext context) =>
 {
     var findTodo = await context.Todos.FindAsync(id);
     if (findTodo is not Todo) throw new Exception("Todo not found.");
@@ -75,11 +75,12 @@ app.MapPost(route, async (Todo todo, TodoDbContext context) =>
 /// <summary>
 /// Update todo by id
 /// </summary>
-app.MapPut($"{route}/{{id}}", async (Guid id, Todo todo, TodoDbContext context) =>
+app.MapPut($"{route}/{{id}}", async (string id, Todo todo, TodoDbContext context) =>
 {
     var findTodo = await context.Todos.FindAsync(id);
     if (findTodo is not Todo) throw new Exception("Todo not found.");
 
+    findTodo.IsCompleted = todo.IsCompleted;
     findTodo.CreatedTime = findTodo.CreatedTime;
     findTodo.UpdatedTime = DateTime.Now;
 
@@ -96,7 +97,7 @@ app.MapPut($"{route}/{{id}}", async (Guid id, Todo todo, TodoDbContext context) 
 /// <summary>
 /// Delete todo by id
 /// </summary>
-app.MapDelete($"{route}/{{id}}", async (Guid id, TodoDbContext context) =>
+app.MapDelete($"{route}/{{id}}", async (string id, TodoDbContext context) =>
 {
     var findTodo = await context.Todos.FindAsync(id);
     if (findTodo is null) throw new Exception("Todo not found.");

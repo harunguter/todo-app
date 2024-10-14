@@ -1,6 +1,6 @@
 # Todo Application
 
-![Screenshot](https://raw.githubusercontent.com/harunguter/todo-app/main/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/harunguter/todo-app/refs/heads/main/screenshot.png)
 
 ## Run app
 

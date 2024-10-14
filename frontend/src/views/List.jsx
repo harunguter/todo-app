@@ -1,12 +1,14 @@
 import _ from "lodash";
-import { useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
+
 import Todo from "~/components/Todo";
 import NotFound from "~/components/NotFound";
+import MainContext from "~/contexts/Main";
 
 import http from "~/utils/http";
 
 const List = () => {
-  const [todos, setTodos] = useState([]);
+  const { todos, setTodos } = useContext(MainContext);
 
   const getTodos = async () => {
     const response = await http.get();
@@ -34,7 +36,7 @@ const List = () => {
     getTodos();
   }, []);
 
-  return !_.isNil(todos) ? (
+  return !_.isEmpty(todos) ? (
     <div
       style={{
         height: 200,

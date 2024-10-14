@@ -1,6 +1,6 @@
 import _ from "lodash";
 import { useEffect, useState } from "react";
-import { Button, Card, ConfigProvider, Space, theme, Typography } from "antd";
+import { Card, ConfigProvider, Space, theme, Typography } from "antd";
 
 import Title from "~/components/Title";
 import Form from "~/components/Form";
@@ -14,6 +14,8 @@ import "~/App.css";
 const App = () => {
   const [themeMode, setThemeMode] = useState("light");
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [todos, setTodos] = useState([]);
+
   useEffect(() => {
     const body = document.body;
     body.classList.remove(...body.classList);
@@ -33,6 +35,8 @@ const App = () => {
         setWindowWidth,
         themeMode,
         setThemeMode,
+        todos,
+        setTodos,
       }}
     >
       <ConfigProvider
@@ -63,10 +67,8 @@ const App = () => {
               <Typography.Text key="tasks">
                 All tasks completed
               </Typography.Text>,
-              <Button key="complete-all">Complete All</Button>,
             ]}
           >
-            {/* <NotFound /> */}
             <List />
           </Card>
         </Space>

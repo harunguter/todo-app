@@ -16,10 +16,10 @@ builder.Services.AddDbContext<TodoDbContext>(options =>
     )
 );
 
+builder.Services.AddCors();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
 
 var app = builder.Build();
 
@@ -127,6 +127,8 @@ app.Use(async (context, next) =>
         await context.Response.WriteAsJsonAsync(new ApiResponse(success: false, message: exception.Message));
     }
 });
+
+app.UseCors(policy => policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseSwagger();
 app.UseSwaggerUI();

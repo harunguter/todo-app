@@ -7,7 +7,7 @@
 ```bash
     git clone https://github.com/harunguter/todo-app.git
     cd todo-app
-    docker compose up -d --build --force-recreate
+    docker compose up -d --build
 ```
 
 | Frontend           | API                    |

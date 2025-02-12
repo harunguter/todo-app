@@ -49,7 +49,7 @@ app.MapGet($"{route}/{{id}}", async (string id, TodoDbContext context) =>
     var findTodo = await context.Todos.FindAsync(id);
     if (findTodo is not Todo) throw new Exception("Todo not found.");
 
-    Log.Information("Finded todo: {@FindTodo}", findTodo);
+    Log.Information("Found todo: {@FindTodo}", findTodo);
 
     return Results.Ok(new ApiResponse(data: findTodo));
 });

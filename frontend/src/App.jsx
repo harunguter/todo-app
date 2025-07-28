@@ -1,5 +1,5 @@
 import _ from "lodash";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Card, ConfigProvider, Space, theme, Typography } from "antd";
 
 import Title from "~/components/Title";
@@ -8,6 +8,7 @@ import Form from "~/components/Form";
 import List from "~/views/List";
 
 import MainContext from "~/contexts/Main";
+import ReactLogo from "~/components/ReactLogo";
 
 import "~/App.css";
 
@@ -56,6 +57,7 @@ const App = () => {
             justifyContent: "center",
           }}
         >
+          {/* <ReactLogo /> */}
           <Title />
           <Card
             title={<Form />}

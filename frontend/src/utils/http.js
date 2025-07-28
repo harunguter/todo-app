@@ -22,11 +22,14 @@ class Http {
 
   get = async (endpoint = null) => await this.instance.get(endpoint);
 
-  post = async (endpoint, data) => await this.instance.post(endpoint, data);
+  post = async (endpoint = null, data) =>
+    await this.instance.post(endpoint, data);
 
-  put = async (endpoint, data) => await this.instance.put(endpoint, data);
+  put = async (endpoint = null, data) =>
+    await this.instance.put(endpoint, data);
 
-  delete = async (endpoint, data) => await this.instance.delete(endpoint, data);
+  delete = async (endpoint = null, data) =>
+    await this.instance.delete(endpoint, data);
 }
 
-export default new Http(import.meta.env.VITE_API_BASE_URL);
+export default new Http("http://ytsm-test-1.bilecik.edu.tr/api/todo");

@@ -32,4 +32,4 @@ class Http {
     await this.instance.delete(endpoint, data);
 }
 
-export default new Http("http://ytsm-test-1.bilecik.edu.tr/api/todo");
+export default new Http("http://localhost/api/todo");

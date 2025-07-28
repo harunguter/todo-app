@@ -57,7 +57,7 @@ const App = () => {
             justifyContent: "center",
           }}
         >
-          {/* <ReactLogo /> */}
+          <ReactLogo />
           <Title />
           <Card
             title={<Form />}

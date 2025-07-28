@@ -14,7 +14,7 @@ jobs:
         run: |
           cd /root/devops
           sudo rm -rf ${{ github.event.repository.name }}
-          sudo git clone --branch dev https://${{ secrets.TOKEN }}@github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}.git
+          sudo git clone --branch dev https://$github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}.git
 
       - name: docker build & run
         run: |

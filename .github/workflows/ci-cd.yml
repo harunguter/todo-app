@@ -18,7 +18,7 @@ jobs:
 
       - name: docker build & run
         run: |
-          cd /root/devops
+          cd /root/devops/${{ github.event.repository.name }}
           sudo docker compose up -d --build --force-recreate
 
       - name: list running docker containers

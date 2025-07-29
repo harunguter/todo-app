@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: deploy
-    runs-on: ytsm-test-1
+    runs-on: server
     steps:
       - name: clone repository
         run: |

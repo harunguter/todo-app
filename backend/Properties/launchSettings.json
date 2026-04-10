@@ -9,7 +9,7 @@
         "ASPNETCORE_ENVIRONMENT": "Production"
       },
       "launchBrowser": true,
-      "launchUrl": "swagger"
+      "launchUrl": "openapi/v1.json"
     }
   }
 }

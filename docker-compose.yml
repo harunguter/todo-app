@@ -40,7 +40,7 @@ services:
       - network
 
   database:
-    image: mongo:8.0
+    image: mongo:4.4
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: pZ5FbOZ50GkZ

@@ -13,7 +13,7 @@ const Form = () => {
   const [adding, setAdding] = useState(false);
 
   const getTodos = async () => {
-    const response = await http.get();
+    const response = await http.get("");
     if (response?.success) {
       setTodos(response?.data);
     }

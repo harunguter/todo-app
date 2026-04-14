@@ -11,7 +11,7 @@ const List = () => {
   const { todos, setTodos } = useContext(MainContext);
 
   const getTodos = async () => {
-    const response = await http.get();
+    const response = await http.get("");
     if (response?.success) {
       setTodos(response?.data);
     }

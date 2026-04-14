@@ -1,0 +1,26 @@
+name: deploy-to-server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: server
+    steps:
+      - name: clone repository
+        run: |
+          cd /root/devops
+          sudo rm -rf ${{ github.event.repository.name }}
+          sudo git clone https://github.com/${{ github.repository_owner }}/${{ github.event.repository.name }}.git
+
+      - name: docker build & run
+        run: |
+          cd /root/devops/${{ github.event.repository.name }}
+          sudo docker compose up -d --build --force-recreate
+
+      - name: list running docker containers
+        run: |
+          sudo docker ps

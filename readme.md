@@ -21,7 +21,7 @@
 #### Get all todos
 
 ```http
-GET /api/todo
+GET /todo
 ```
 
 #### Get single todo
@@ -76,10 +76,9 @@ DELETE  /todo/:id
 
 ## Tech Stack
 
-**Server:** Nginx
-<br />
-**Frontend:** React
-<br />
-**Database:** MongoDB
-<br/>
-**Backend:** ASP.NET Core
+| Layer      | Technology   | Purpose                          |
+| ---------- | ------------ | -------------------------------- |
+| Server     | Nginx        | Reverse proxy and static hosting |
+| Frontend   | React        | User interface                   |
+| Backend    | ASP.NET Core | REST API                         |
+| Database   | MongoDB      | Data storage                     |

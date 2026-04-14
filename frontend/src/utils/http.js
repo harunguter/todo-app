@@ -3,20 +3,20 @@ import _ from "lodash";
 import axios from "axios";
 
 class Http {
-  constructor(baseURL, headers = {}) {
+  constructor(baseURL = import.meta.env.VITE_API_BASE_URL, headers = {}) {
     this.instance = axios.create({ baseURL, headers });
     this.instance.interceptors.response.use(
       (response) => response.data,
       (error) => {
         console.error(
           `Request error: ${error.message}${_.isNil(
-            error?.response?.data?.message
+            error?.response?.data?.message,
           )}`
             ? ""
-            : `, data: ${error?.response?.data}`
+            : `, data: ${error?.response?.data}`,
         );
         return _.defaultTo(error?.response?.data?.message, error?.message);
-      }
+      },
     );
   }
 
@@ -32,4 +32,4 @@ class Http {
     await this.instance.delete(endpoint, data);
 }
 
-export default new Http("http://localhost/api/todo");
+export default new Http();
